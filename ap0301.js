@@ -26,8 +26,8 @@ function init() {
 
   // ロボットの作成
   const robots = new THREE.Group();
-  for(let x = 0;x<9;x++){
-  for(let z = 0;z<3;z++){
+  for(let x = -4;x<5;x++){
+  for(let z = -4;z<5;z++){
    let robot;
     if(Math.random() < 0.25){
      robot = makeCBRobot();
@@ -46,7 +46,7 @@ function init() {
   scene.add(robots);
 
   // 光源の設定
-  const light = new THREE.SpotLight();
+  const light = new THREE.SpotLight(0xffffff,1800);
   light.position.set(0, 30, 30);
   scene.add(light);
   
